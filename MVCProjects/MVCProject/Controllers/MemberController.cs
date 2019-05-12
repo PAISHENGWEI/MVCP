@@ -44,7 +44,7 @@ namespace MVCProject.Controllers
                 //呼叫Service註冊新會員
                 memberService.Register(RegisterMember.newMemder);
                 //取得寫好的驗證信範本內容
-                string Tempmail = System.IO.File.ReadAllText(Server.MapPath("~/View/Shared/RegisterEmailTemplate.html"));
+                string Tempmail = System.IO.File.ReadAllText(Server.MapPath("~/Views/Shared/RegisterEmailTemplate.html"));
                 //宣告Email驗證用的Url
                 UriBuilder ValidateUrl = new UriBuilder(Request.Url)
                 {
