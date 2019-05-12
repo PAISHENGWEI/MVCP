@@ -69,5 +69,21 @@ namespace MVCProject.Controllers
             //將資料回傳至view中
             return View(RegisterMember);
         }
+        //註冊結果顯示頁面
+        public ActionResult RegisterResult()
+        {
+            return View();
+        }
+        //判斷註冊帳號是否被註冊過
+        public JsonResult AccountCheck(MemberRegisterView RegisterMember)
+        {
+            return Json(memberService.AccountChecck(RegisterMember.newMemder.Acount), JsonRequestBehavior.AllowGet);
+        }
+        //接受驗證信傳來的Action
+        public ActionResult EmailValidate(string UserName,string Authcode)
+        {
+            ViewData["EmailValidate"] = memberService.EmailValidate(UserName, Authcode);
+            return View();
+        }
     }
 }

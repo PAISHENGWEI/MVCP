@@ -228,10 +228,13 @@
     <Content Include="Views\Guestbook\Create.cshtml" />
     <Content Include="Views\Guestbook\Edit.cshtml" />
     <Content Include="Views\Guestbook\Reply.cshtml" />
+    <Content Include="Views\Member\Register.cshtml" />
+    <Content Include="Views\Member\RegisterResult.cshtml" />
+    <Content Include="Views\Member\EmailValidate.cshtml" />
+    <Content Include="Views\Shared\RegisterEmailTemplate.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Member\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

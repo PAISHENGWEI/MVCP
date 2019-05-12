@@ -1,0 +1,80 @@
+﻿@model MVCProject.ViewModels.MemberRegisterView
+
+@{
+    ViewBag.Title = "註冊";
+}
+
+<h2>註冊</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    //資料驗證
+    @Html.ValidationSummary(true)
+<table>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.newMemder.Acount)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.newMemder.Acount)
+            @Html.ValidationMessageFor(model => model.newMemder.Acount)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Password)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.PasswordCheck)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.PasswordCheck)
+            @Html.ValidationMessageFor(model => model.PasswordCheck)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.newMemder.Name)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.newMemder.Name)
+            @Html.ValidationMessageFor(model => model.newMemder.Name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.newMemder.Email)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.newMemder.Email)
+            @Html.ValidationMessageFor(model => model.newMemder.Email)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="註冊" />
+        </td>
+
+    </tr>
+</table>
+
+
+
+
+    
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
